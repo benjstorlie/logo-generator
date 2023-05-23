@@ -1,0 +1,14 @@
+{
+  "name": "logo-generator",
+  "version": "1.0.0",
+  "description": "generates an svg logo from command-line input",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Ben Storlie",
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "inquirer": "^8.2.4"
+  }
+}
