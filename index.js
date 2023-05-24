@@ -1,11 +1,4 @@
 // Runs the application using imports from lib/
 
-let apple = 'apple'
-
-class Shape {
-
-}
-
-let banana = new Shape()
-
-console.log(banana instanceof String)
+const {Shape, Triangle, Circle, Square} = require('./lib/shapes.js')
+const Logo = require('./lib/logo.js')
