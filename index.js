@@ -2,7 +2,7 @@
 
 const {Shape, Triangle, Circle, Square} = require('./lib/shapes.js')
 const Logo = require('./lib/logo.js')
-const {colorFilter, colorValidate, answersColor, questions} = require('./lib/questions.js')
+const {colorFilter, colorValidate, questions} = require('./lib/questions.js')
 const { writeToFile, titleFileName} = require('./lib/fsUtils.js');
 
 // Import Inquirer for command-line interaction
@@ -19,18 +19,15 @@ function buildSVG() {
       text,
       textColorList,
       textColorInput,
-      fontSizeList,
       fillColorList,
       fillColorInput
     } = answers;
     let logo = new Logo({
-      textColor: answersColor(textColorList,textColorInput),
+      textColor: textColorInput || textColorList, 
       text: text,
     });
-    fontSizeList.pop();
-    logo.setTextSize({value: Number(fontSizeList)})
     if (shape !== 'no shape') {
-      logo.setFillColor(answersColor(fillColorList, fillColorInput))
+      logo.setFillColor(fillColorInput || fillColorList)
       logo.setShape(shape);
     } 
 
