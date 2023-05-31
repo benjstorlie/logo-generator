@@ -14,8 +14,7 @@ function buildSVG() {
 
   console.log('buildSVG')
 
-  inquirer.prompt(questions,{cont: false}).then((answers) => {
-    console.log('ans:'+answers)
+  inquirer.prompt(questions).then((answers) => {
     const { shape,
       text,
       textColorList,
@@ -42,18 +41,6 @@ function buildSVG() {
       console.log(logo.render()) // At least you don't lose your data and have to do it all over again if it doesn't save correctly.
     }
     })
-
-    answers.continue = true
-    inquirer.prompt(questions,answers)
-    
-}
-
-
-function edit(logo, edit) {
-  edit.continue = true;
-  inquirer.prompt(questions,edit).then((answers) => {
-
-  })
 }
 
 function init() {
