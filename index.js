@@ -1,18 +1,14 @@
 // Runs the application using imports from lib/
 
-const {Shape, Triangle, Circle, Square} = require('./lib/shapes.js')
+//const {Shape, Triangle, Circle, Square} = require('./lib/shapes.js')
 const Logo = require('./lib/logo.js')
-const {colorFilter, colorValidate, questions} = require('./lib/questions.js')
+const {questions} = require('./lib/questions.js')
 const { writeToFile, titleFileName} = require('./lib/fsUtils.js');
 
 // Import Inquirer for command-line interaction
 const inquirer = require('inquirer');
 
-
-
 function buildSVG() {
-
-  console.log('buildSVG')
 
   inquirer.prompt(questions).then((answers) => {
     const { shape,
