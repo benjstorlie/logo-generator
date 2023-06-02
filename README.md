@@ -51,11 +51,13 @@ Start the program by entering
 
 `node index.js`
 
-Your new logo will be saved in the folder `logos`.
+Your new logo will be saved in the folder `logos`, with a title based on the text of the logo.
 
 ### Example Use
 
-Video link goes here.
+[Link to example use video](https://drive.google.com/file/d/1JUvvsLufU_rw_gxJIlaTeVUuUzkQDn9U/view)
+
+The above video shows an example logo being made. It shows how validation for the color inputs works, and how you can input both hex and color keywords, and that it is flexible with inputs. It also shows the jest tests passing.
 
 ## Comments
 
